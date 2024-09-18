@@ -27,7 +27,7 @@ export class Path extends CurvePath<Vector2> {
      * Creates a {@link Path} from the points
      * @remarks
      * The first point defines the offset, then successive points are added to the {@link CurvePath.curves | curves} array as {@link LineCurve | LineCurves}.
-     * If no points are specified, an empty {@link Path} is created and the {@link .currentPoint} is set to the origin.
+     * If no points are specified, an empty {@link Path} is created and the {@link currentPoint} is set to the origin.
      * @param points Array of {@link Vector2 | Vector2s}.
      */
     constructor(points?: Vector2[]);
@@ -79,7 +79,7 @@ export class Path extends CurvePath<Vector2> {
     ): this;
 
     /**
-     * Adds an {@link THREE.EllipseCurve | EllipseCurve} to the path, positioned relative to {@link .currentPoint}.
+     * Adds an {@link THREE.EllipseCurve | EllipseCurve} to the path, positioned relative to {@link currentPoint}.
      * @param x Expects a `Float`
      * @param y X, The center of the arc offset from the last call. Expects a `Float`
      * @param radius The radius of the arc. Expects a `Float`
@@ -90,7 +90,7 @@ export class Path extends CurvePath<Vector2> {
     arc(aX: number, aY: number, aRadius: number, aStartAngle: number, aEndAngle: number, aClockwise?: boolean): this;
 
     /**
-     * This creates a bezier curve from {@link .currentPoint} with (cp1X, cp1Y) and (cp2X, cp2Y) as control points and updates {@link .currentPoint} to x and y.
+     * This creates a bezier curve from {@link currentPoint} with (cp1X, cp1Y) and (cp2X, cp2Y) as control points and updates {@link currentPoint} to x and y.
      * @param cp1X Expects a `Float`
      * @param cp1Y Expects a `Float`
      * @param cp2X Expects a `Float`
@@ -101,7 +101,7 @@ export class Path extends CurvePath<Vector2> {
     bezierCurveTo(aCP1x: number, aCP1y: number, aCP2x: number, aCP2y: number, aX: number, aY: number): this;
 
     /**
-     * Adds an {@link THREE.EllipseCurve | EllipseCurve} to the path, positioned relative to {@link .currentPoint}.
+     * Adds an {@link THREE.EllipseCurve | EllipseCurve} to the path, positioned relative to {@link currentPoint}.
      * @param x Expects a `Float`
      * @param y X, The center of the ellipse offset from the last call. Expects a `Float`
      * @param xRadius The radius of the ellipse in the x axis. Expects a `Float`
@@ -123,21 +123,21 @@ export class Path extends CurvePath<Vector2> {
     ): this;
 
     /**
-     * Connects a {@link THREE.LineCurve | LineCurve} from {@link .currentPoint} to x, y onto the path.
+     * Connects a {@link THREE.LineCurve | LineCurve} from {@link currentPoint} to x, y onto the path.
      * @param x Expects a `Float`
      * @param y Expects a `Float`
      */
     lineTo(x: number, y: number): this;
 
     /**
-     * Move the {@link .currentPoint} to x, y.
+     * Move the {@link currentPoint} to x, y.
      * @param x Expects a `Float`
      * @param y Expects a `Float`
      */
     moveTo(x: number, y: number): this;
 
     /**
-     * Creates a quadratic curve from {@link .currentPoint} with cpX and cpY as control point and updates {@link .currentPoint} to x and y.
+     * Creates a quadratic curve from {@link currentPoint} with cpX and cpY as control point and updates {@link currentPoint} to x and y.
      * @param cpX Expects a `Float`
      * @param cpY Expects a `Float`
      * @param x Expects a `Float`

@@ -37,7 +37,7 @@ export class Shape extends Path {
      * Creates a {@link Shape} from the points
      * @remarks
      * The first point defines the offset, then successive points are added to the {@link CurvePath.curves | curves} array as {@link THREE.LineCurve | LineCurves}.
-     * If no points are specified, an empty {@link Shape} is created and the {@link .currentPoint} is set to the origin.
+     * If no points are specified, an empty {@link Shape} is created and the {@link currentPoint} is set to the origin.
      * @param points Array of {@link Vector2 | Vector2s}.
      */
     constructor(points?: Vector2[]);

@@ -2,8 +2,8 @@
  * This class is an alternative to {@link THREE.Clock} with a different API design and behavior
  * The goal is to avoid the conceptual flaws that became apparent in {@link THREE.Clock} over time.
  *
- * - {@link Timer} has an {@link .update()} method that updates its internal state. That makes it possible to call
- *   {@link .getDelta()} and {@link .getElapsed()} multiple times per simulation step without getting different values.
+ * - {@link Timer} has an {@link update()} method that updates its internal state. That makes it possible to call
+ *   {@link getDelta()} and {@link getElapsed()} multiple times per simulation step without getting different values.
  * - The class uses the Page Visibility API to avoid large time delta values when the app is inactive (e.g. tab switched
  *   or browser hidden).
  * - It's possible to configure a fixed time delta and a time scale value (similar to Unity's Time interface).
@@ -50,7 +50,7 @@ export class Timer {
     getElapsed(): number;
 
     /**
-     * Returns the fixed time delta that has been previously configured via {@link .setFixedDelta()}.
+     * Returns the fixed time delta that has been previously configured via {@link setFixedDelta()}.
      */
     getFixedDelta(): number;
 
@@ -67,14 +67,14 @@ export class Timer {
     setFixedDelta(fixedDelta: number): this;
 
     /**
-     * Sets a time scale that scales the time delta in {@link .update()}.
+     * Sets a time scale that scales the time delta in {@link update()}.
      * @param timescale
      */
     setTimescale(timescale: number): this;
 
     /**
      * Updates the internal state of the timer. This method should be called once per simulation step and before you
-     * perform queries against the timer (e.g. via {@link .getDelta()}).
+     * perform queries against the timer (e.g. via {@link getDelta()}).
      */
     update(): this;
 }

@@ -37,8 +37,8 @@ export abstract class Curve<T extends Vector> {
 
     /**
      * This value determines the amount of divisions when calculating the cumulative segment lengths of a {@link Curve}
-     * via {@link .getLengths}.
-     * To ensure precision when using methods like {@link .getSpacedPoints}, it is recommended to increase {@link .arcLengthDivisions} if the {@link Curve} is very large.
+     * via {@link getLengths}.
+     * To ensure precision when using methods like {@link getSpacedPoints}, it is recommended to increase {@link arcLengthDivisions} if the {@link Curve} is very large.
      * @defaultValue `200`
      * @remarks Expects a `Integer`
      */
@@ -59,13 +59,13 @@ export abstract class Curve<T extends Vector> {
     getPointAt(u: number, optionalTarget?: T): T;
 
     /**
-     * Returns a set of divisions `+1` points using {@link .getPoint | getPoint(t)}.
+     * Returns a set of divisions `+1` points using {@link getPoint | getPoint(t)}.
      * @param divisions Number of pieces to divide the {@link Curve} into. Expects a `Integer`. Default `5`
      */
     getPoints(divisions?: number): T[];
 
     /**
-     * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
+     * Returns a set of divisions `+1` equi-spaced points using {@link getPointAt | getPointAt(u)}.
      * @param divisions Number of pieces to divide the {@link Curve} into. Expects a `Integer`. Default `5`
      */
     getSpacedPoints(divisions?: number): T[];
@@ -86,14 +86,14 @@ export abstract class Curve<T extends Vector> {
      * @remarks
      * The method must be called every time {@link Curve} parameters are changed
      * If an updated {@link Curve} is part of a composed {@link Curve} like {@link THREE.CurvePath | CurvePath},
-     * {@link .updateArcLengths}() must be called on the composed curve, too.
+     * {@link updateArcLengths}() must be called on the composed curve, too.
      */
     updateArcLengths(): void;
 
     /**
      * Given u in the range `[ 0, 1 ]`,
      * @remarks
-     * `u` and `t` can then be used to give you points which are equidistant from the ends of the curve, using {@link .getPoint}.
+     * `u` and `t` can then be used to give you points which are equidistant from the ends of the curve, using {@link getPoint}.
      * @param u Expects a `Float`
      * @param distance Expects a `Float`
      * @returns `t` also in the range `[ 0, 1 ]`. Expects a `Float`.
@@ -110,7 +110,7 @@ export abstract class Curve<T extends Vector> {
     getTangent(t: number, optionalTarget?: T): T;
 
     /**
-     * Returns tangent at a point which is equidistant to the ends of the {@link Curve} from the point given in {@link .getTangent}.
+     * Returns tangent at a point which is equidistant to the ends of the {@link Curve} from the point given in {@link getTangent}.
      * @param u A position on the {@link Curve} according to the arc length. Must be in the range `[ 0, 1 ]`. Expects a `Float`
      * @param optionalTarget If specified, the result will be copied into this Vector, otherwise a new Vector will be created.
      */

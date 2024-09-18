@@ -118,7 +118,7 @@ export class PerspectiveCamera extends Camera {
     filmOffset: number;
 
     /**
-     * Returns the focal length of the current {@link .fov | fov} in respect to {@link filmGauge | .filmGauge}.
+     * Returns the focal length of the current {@link fov | fov} in respect to {@link filmGauge | .filmGauge}.
      */
     getFocalLength(): number;
 

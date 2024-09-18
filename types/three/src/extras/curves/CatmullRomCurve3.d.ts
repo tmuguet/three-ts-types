@@ -70,7 +70,7 @@ export class CatmullRomCurve3 extends Curve<Vector3> {
     curveType: CurveType;
 
     /**
-     * When {@link .curveType} is `catmullrom`, defines catmullrom's tension.
+     * When {@link curveType} is `catmullrom`, defines catmullrom's tension.
      * @remarks Expects a `Float`
      */
     tension: number;

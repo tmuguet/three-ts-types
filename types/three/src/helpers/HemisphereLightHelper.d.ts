@@ -59,7 +59,7 @@ export class HemisphereLightHelper extends Object3D {
     color: ColorRepresentation | undefined;
 
     /**
-     * Updates the helper to match the position and direction of the {@link .light | HemisphereLight}.
+     * Updates the helper to match the position and direction of the {@link light | HemisphereLight}.
      */
     update(): void;
 

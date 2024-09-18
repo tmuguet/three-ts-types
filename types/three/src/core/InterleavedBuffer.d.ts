@@ -53,7 +53,7 @@ export class InterleavedBuffer {
     };
 
     /**
-     * This can be used to only update some components of stored data. Use the {@link .addUpdateRange} function to add
+     * This can be used to only update some components of stored data. Use the {@link addUpdateRange} function to add
      * ranges to this array.
      */
     updateRanges: Array<{
@@ -117,12 +117,12 @@ export class InterleavedBuffer {
 
     /**
      * Adds a range of data in the data array to be updated on the GPU. Adds an object describing the range to the
-     * {@link .updateRanges} array.
+     * {@link updateRanges} array.
      */
     addUpdateRange(start: number, count: number): void;
 
     /**
-     * Clears the {@link .updateRanges} array.
+     * Clears the {@link updateRanges} array.
      */
     clearUpdateRanges(): void;
 

@@ -102,7 +102,7 @@ export class BufferAttribute {
 
     /**
      * This can be used to only update some components of stored vectors (for example, just the component related to
-     * color). Use the {@link .addUpdateRange} function to add ranges to this array.
+     * color). Use the {@link addUpdateRange} function to add ranges to this array.
      */
     updateRanges: Array<{
         /**
@@ -177,12 +177,12 @@ export class BufferAttribute {
 
     /**
      * Adds a range of data in the data array to be updated on the GPU. Adds an object describing the range to the
-     * {@link .updateRanges} array.
+     * {@link updateRanges} array.
      */
     addUpdateRange(start: number, count: number): void;
 
     /**
-     * Clears the {@link .updateRanges} array.
+     * Clears the {@link updateRanges} array.
      */
     clearUpdateRanges(): void;
 

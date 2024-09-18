@@ -34,7 +34,7 @@ export class CurvePath<T extends Vector> extends Curve<T> {
     autoClose: boolean;
 
     /**
-     * Add a curve to the {@link .curves} array.
+     * Add a curve to the {@link curves} array.
      * @param curve
      */
     add(curve: Curve<T>): void;
@@ -46,7 +46,7 @@ export class CurvePath<T extends Vector> extends Curve<T> {
     getPoint(t: number, optionalTarget?: T): T;
 
     /**
-     * Get list of cumulative curve lengths of the curves in the {@link .curves} array.
+     * Get list of cumulative curve lengths of the curves in the {@link curves} array.
      */
     getCurveLengths(): number[];
 
@@ -61,7 +61,7 @@ export class CurvePath<T extends Vector> extends Curve<T> {
     override getPoints(divisions?: number): T[];
 
     /**
-     * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
+     * Returns a set of divisions `+1` equi-spaced points using {@link getPointAt | getPointAt(u)}.
      * @param divisions Number of pieces to divide the curve into. Expects a `Integer`. Default `40`
      */
     override getSpacedPoints(divisions?: number): T[];

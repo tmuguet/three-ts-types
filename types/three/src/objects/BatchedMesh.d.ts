@@ -36,14 +36,14 @@ import { Camera } from '../cameras/Camera.js';
 declare class BatchedMesh extends Mesh<BufferGeometry, Material> {
     /**
      * This bounding box encloses all instances of the {@link BatchedMesh}. Can be calculated with
-     * {@link .computeBoundingBox()}.
+     * {@link computeBoundingBox()}.
      * @default null
      */
     boundingBox: Box3 | null;
 
     /**
      * This bounding sphere encloses all instances of the {@link BatchedMesh}. Can be calculated with
-     * {@link .computeBoundingSphere()}.
+     * {@link computeBoundingSphere()}.
      * @default null
      */
     boundingSphere: Sphere | null;
@@ -84,13 +84,13 @@ declare class BatchedMesh extends Mesh<BufferGeometry, Material> {
     constructor(maxGeometryCount: number, maxVertexCount: number, maxIndexCount?: number, material?: Material);
 
     /**
-     * Computes the bounding box, updating {@link .boundingBox} attribute.
+     * Computes the bounding box, updating {@link boundingBox} attribute.
      * Bounding boxes aren't computed by default. They need to be explicitly computed, otherwise they are `null`.
      */
     computeBoundingBox(): void;
 
     /**
-     * Computes the bounding sphere, updating {@link .boundingSphere} attribute.
+     * Computes the bounding sphere, updating {@link boundingSphere} attribute.
      * Bounding spheres aren't computed by default. They need to be explicitly computed, otherwise they are `null`.
      */
     computeBoundingSphere(): void;
@@ -123,7 +123,7 @@ declare class BatchedMesh extends Mesh<BufferGeometry, Material> {
     getVisibleAt(index: number): boolean;
 
     /**
-     * Sets the given local transformation matrix to the defined instance. Make sure you set {@link .instanceMatrix}
+     * Sets the given local transformation matrix to the defined instance. Make sure you set {@link instanceMatrix}
      * {@link BufferAttribute.needsUpdate} to true after updating all the matrices.
      * @param index The index of an instance. Values have to be in the range [0, count].
      * @param matrix A 4x4 matrix representing the local transformation of a single instance.
