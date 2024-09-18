@@ -78,7 +78,7 @@ export class Object3D<TEventMap extends Object3DEventMap = Object3DEventMap> ext
 
     /**
      * Array with object's children.
-     * @see {@link THREE.Object3DGroup | Group} for info on manually grouping objects.
+     * @see {@link THREE.Group | Group} for info on manually grouping objects.
      * @defaultValue `[]`
      */
 
@@ -160,7 +160,7 @@ export class Object3D<TEventMap extends Object3DEventMap = Object3DEventMap> ext
     /**
      * The layer membership of the object.
      * @remarks
-     * - The object is only visible if it has at least one layer in common with the {@link THREE.Object3DCamera | Camera} in use.
+     * - The object is only visible if it has at least one layer in common with the {@link THREE.Camera | Camera} in use.
      * - This property can also be used to filter out unwanted objects in ray-intersection tests when using {@link THREE.Raycaster | Raycaster}.
      * @defaultValue `new THREE.Layers()`
      */
@@ -225,7 +225,7 @@ export class Object3D<TEventMap extends Object3DEventMap = Object3DEventMap> ext
     customDepthMaterial?: Material | undefined;
 
     /**
-     * Same as {@link customDepthMaterial}, but used with {@link THREE.Object3DPointLight | PointLight}.
+     * Same as {@link customDepthMaterial}, but used with {@link THREE.PointLight | PointLight}.
      * @defaultValue `undefined`
      */
     customDistanceMaterial?: Material | undefined;
