@@ -371,19 +371,19 @@ export class Object3D<TEventMap extends Object3DEventMap = Object3DEventMap> ext
 
     /**
      * Rotates the object around _x_ axis in local space.
-     * @param rad The angle to rotate in radians. Expects a `Float`
+     * @param angle The angle to rotate in radians. Expects a `Float`
      */
     rotateX(angle: number): this;
 
     /**
      * Rotates the object around _y_ axis in local space.
-     * @param rad The angle to rotate in radians. Expects a `Float`
+     * @param angle The angle to rotate in radians. Expects a `Float`
      */
     rotateY(angle: number): this;
 
     /**
      * Rotates the object around _z_ axis in local space.
-     * @param rad The angle to rotate in radians. Expects a `Float`
+     * @param angle The angle to rotate in radians. Expects a `Float`
      */
     rotateZ(angle: number): this;
 
