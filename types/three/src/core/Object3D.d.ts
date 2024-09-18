@@ -297,7 +297,7 @@ export class Object3D<TEventMap extends Object3DEventMap = Object3DEventMap> ext
 
     /**
      * The default {@link up} direction for objects, also used as the default position for {@link THREE.DirectionalLight | DirectionalLight},
-     * {@link THREE.HemisphereLight | HemisphereLight} and {@link THREE.Spotlight | Spotlight} (which creates lights shining from the top down).
+     * {@link THREE.HemisphereLight | HemisphereLight} and {@link THREE.SpotLight | SpotLight} (which creates lights shining from the top down).
      * @defaultValue `new THREE.Vector3( 0, 1, 0)`
      */
     static DEFAULT_UP: Vector3;
